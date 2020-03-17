@@ -1,0 +1,11 @@
+version: '3'
+services:
+ node:
+   build:
+     context: .
+   container_name: hexo-generate
+   volumes:
+    - ./hexo:/hexo
+   ports:
+    - "4000:4000"
+   command: sh -c "hexo server"
