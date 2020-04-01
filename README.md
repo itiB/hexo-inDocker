@@ -5,6 +5,10 @@
 Nodejsを用いた静的サイトジェネレータHexoをDockerで実行してつくることで  
 環境をきれいに保てるすばらしさである...
 
-中身はそのうち更新するかもしれない
+`Dockerfile`と`dokcer-compose.yml`を置いたディレクトリで以下を実行することでブログが作れる
 
-うつすとしたらnetlifyで無料公開かな
+```
+$ docker-compose build
+$ docker-compose run --rm node sh -c"hexo init hexo"
+$ docker-compose up
+```
